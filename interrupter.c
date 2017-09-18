@@ -4,8 +4,8 @@
 #include "interrupter.h"
 
 void initInterrupt(){
-	EICRA = 0b00000000;
-	EIMSK = 0b00000100;
-
+	// Use pull up as input, so don't set EICRA.
+	EIMSK = (1 << INT0); // activate INT0 interrupt
+	sei(); //activate interrupts
 	xQueueSendToBackFromISR();
 }
