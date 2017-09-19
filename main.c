@@ -16,7 +16,7 @@ void initPins(){
 int main(void)
 {
 	initPins();
-	//initDiode();
+	initInterrupt();
 	initCom();
 	initLightrope();
 	initTC();

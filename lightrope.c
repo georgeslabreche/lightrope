@@ -15,35 +15,48 @@ static void runLightrope(){
     // It will be updated automatically
     xLastWakeTime = xTaskGetTickCount();
 
-	uint16_t delayTime = 500;
+	uint16_t delayTime = 100; // was 500
 	PORTB=~1;
 
+    // 0 - init
 	// 1 - start
 	// 2 - ready
 	// 3 - low
 	// 4 - high
-	unsigned int state = 1;
+	unsigned int state = 0;
 	unsigned char command;
+
+	PORTB = 0b00000000;
 
 	while(1)
     {
-		// Grab command data from shared memory
+		// Grab command data from Queue
 		command = readCom();
 
-		if(state == 1){
-			PORTB = 0b11111111;
+		if(state == 0)
+		{
+			if(command == 0b0000101){
+				PORTB = 0b11111111;
+				state = 1;
+			}
 
-			if(command == 0b11111110){
+		}else if(state == 1)
+		{
+			if(command == 0b00000100)
+			{
+				PORTB = 0b11111110;
 				state = 2;
-			}
-			
-		}else if(state == 2){
-			PORTB = 0b11111110;
 
-			if(command == 0b11111110){
-				state = 3;
 			}
-			else if(command == 0b11111101){
+
+		}else if(state == 2)
+		{
+			if(command == 0b00000101)
+			{
+				state = 3;
+
+			}else if(command == 0b00000110)
+			{
 				state = 4;
 			}
 
@@ -59,14 +72,14 @@ static void runLightrope(){
 
 			switch (command)
 			{
-				// If command is HIGH frequency	
-				case (0b11111110):
+				// If command is LOW frequency	
+				case (0b00000101):
 				{
 					delayTime = 300;
 					break;
 				}
-				// Else if command is LOW frequency
-				case (0b11111101):
+				// Else if command is HIGH frequency
+				case (0b00000110):
 				{
 					delayTime = 10;
 					break;
@@ -77,6 +90,7 @@ static void runLightrope(){
 		}
 
 		vTaskDelayUntil(&xLastWakeTime, ( delayTime / portTICK_RATE_MS));
+
 	}	
 }
 
