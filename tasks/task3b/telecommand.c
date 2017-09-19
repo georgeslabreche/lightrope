@@ -5,8 +5,9 @@
  * Description:
  *	This object relays messages between the command
  *	object and the lightrope object. It uses interrupts
- *	to dispatch a message that is then saved in a shared
- *	memory variable in the command object.
+ *	to dispatch a command message that is saved in a 
+ *	shared memory variable in the command object. The 
+ *	command message is relayed using a queue.
  *
  * Authors:
  * 	Georges L. J. Labreche <geolab-7@student.ltu.se>
