@@ -2,9 +2,9 @@
  * Title: Assignment 2 - Tasks in FreeRTOS 
  *
  * Reason:
- * 	- To familiarize with the task concept.
- *	- To familiarize with the FreeRTOS.
- *	- To familiarize with the STK500 development board.
+ * 	- To familiarise with the task concept.
+ *	- To familiarise with the FreeRTOS.
+ *	- To familiarise with the STK500 development board.
  *	- To prepare for the final RTOS system lab.
  *
  * Authors:
