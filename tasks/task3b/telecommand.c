@@ -13,11 +13,21 @@
  * 	Natalie Lawton <natlaw-7@student.ltu.se>
  */
 #include <avr/io.h>
-#include <avr/interrupt.h>
 #include <FreeRTOS.h>
+
+/* Access to interrupt methods and macros. */
+#include <avr/interrupt.h>
+
+/* Access to task methods and macros. */
 #include <task.h>
+
+/* Access to queue methods and macros. */
 #include <queue.h>
+
+/* Access to command related methods. */
 #include "command.h"
+
+/* The header of this object. */
 #include "telecommand.h"
 
 /* The message queue used to relay commands. */
