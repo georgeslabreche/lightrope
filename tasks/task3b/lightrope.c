@@ -11,7 +11,7 @@
  *	program are transitioned to and from. There are 5 states,
  *	each assigned a unique unsigned int identifier.
  *
- *    	0 - Init: All LED lights are switched on.
+ *    	0 - Initial: All LED lights are switched on.
  *	1 - Start: All LED lights are switched off.
  *	2 - Ready: Only LED light LED0 is switched on.
  *	3 - Low: Lightrope sequence engaged at low speed.
@@ -59,7 +59,7 @@ static void runLightrope(){
 	/* The variable that will contain the command value */
 	unsigned char command = NULL;
 
-	/* Initial state set to state 0 - Init. */
+	/* Initial state set to state 0 - Initial. */
 	unsigned int state = 0;
 	
 	/* At initial state 0 we want all LEDS switched on */ 
@@ -75,7 +75,7 @@ static void runLightrope(){
 		 */ 
 		command = readCom();
 
-		/* Enter initial state: State 0 - Init. */
+		/* Enter initial state: State 0 - Initial. */
 		if(state == 0)
 		{
 			/* 
