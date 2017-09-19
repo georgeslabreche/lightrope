@@ -1,7 +1,10 @@
 /*
  * Title:
- * 	The command object. This object stores the command that needs to be
- *	executed into a shared variable. The variable is thread safe
+ * 	The command object.
+ *
+ * Description:
+ *	This object stores the command that needs to be executed
+ *	into a shared variable. The variable is made thread safe
  *	by use of a mutual exclusion semaphore.
  *
  * Authors:
