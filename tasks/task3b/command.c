@@ -16,8 +16,8 @@
 /* Header file for this object. */
 #include "command.h"
 
-static xSemaphoreHandle xSemaphore;
-static unsigned char sharedCommand;
+static xSemaphoreHandle xSemaphore = NULL; /* The semaphore. */
+static unsigned char sharedCommand = NULL; /* The shared memory variable. */
 
 /*
  * Initialise the command object.
