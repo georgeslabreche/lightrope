@@ -13,9 +13,9 @@ OBC R7018R HT2017
 - To prepare for the final RTOS system lab.
 
 ### Resources
-- [Assignment Instructions.](docs/Assignment 2 -Tasks in FreeRTOS.pdf)
-- [Datasheet Atmega8.](docs/Datasheet Atmega8.pdf)
-- [STK500 interrupts.](docs/STK500 interrupts.pdf)
+- [Assignment Instructions.](https://raw.githubusercontent.com/georgeslabreche/lightrope/master/docs/Assignment 2 -Tasks in FreeRTOS.pdf)
+- [Datasheet Atmega8.](https://raw.githubusercontent.com/georgeslabreche/lightrope/master/docs/Datasheet Atmega8.pdf)
+- [STK500 interrupts.](https://raw.githubusercontent.com/georgeslabreche/lightrope/master/docs/STK500 interrupts.pdf)
 
 ### Task 3b State Diagram
-![Task 3b State Diagram](docs/Task 3b State Diagram.png)
+![Task 3b State Diagram](https://raw.githubusercontent.com/georgeslabreche/lightrope/master/docs/Task 3b State Diagram.png)
