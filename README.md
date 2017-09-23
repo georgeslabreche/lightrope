@@ -18,4 +18,4 @@ OBC R7018R HT2017
 - [STK500 interrupts.](https://raw.githubusercontent.com/georgeslabreche/lightrope/master/docs/STK500%20interrupts.pdf)
 
 ### Task 3b State Diagram
-![Task 3b State Diagram](https://raw.githubusercontent.com/georgeslabreche/lightrope/master/docs/Task 3b State Diagram.png)
+![Task 3b State Diagram](lightrope/master/docs/Task 3b State Diagram.png)
